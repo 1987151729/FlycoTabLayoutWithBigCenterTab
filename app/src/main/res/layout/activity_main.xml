@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_change"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/tl_3"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="#ffffff"
+                tl:tl_iconHeight="23dp"
+                tl:tl_iconWidth="23dp"
+                tl:tl_indicator_color="#2C97DE"
+                tl:tl_indicator_height="0dp"
+                tl:tl_textSelectColor="#2C97DE"
+                tl:tl_textUnselectColor="#66000000"
+                tl:tl_textsize="12sp"
+                tl:tl_underline_color="#DDDDDD"
+                tl:tl_underline_gravity="TOP"
+                tl:tl_underline_height="1dp" />
+
+        </LinearLayout>
+
+        <!-- 这里的ImageButton即是中间凸起按钮，是独立于FlycoTabLayout而存在。是在FlycoTabLayout视图之上的一个遮挡视图。 -->
+        <ImageButton
+            android:id="@+id/tab_main_center"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/tab_main_center" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
